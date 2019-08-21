@@ -16,7 +16,15 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Button mlogout = findViewById(R.id.logout);
+        Button mlogout = (Button) findViewById(R.id.logout);
+        Button mFindUser = (Button) findViewById(R.id.findUser);
+
+        mFindUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), FindUserActivity.class));
+            }
+        });
 
         mlogout.setOnClickListener(new View.OnClickListener() {
             @Override
