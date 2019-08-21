@@ -24,6 +24,18 @@ public class FindUserActivity extends AppCompatActivity {
 
         userList = new ArrayList<>();
         initializeRecycleView();
+
+        getContactList();
+    }
+
+    public void getContactList(){
+        UserObject user1 = new UserObject("John", "847-222-2222");
+        UserObject user2 = new UserObject("Steve", "847-191-4562");
+        userList.add(user1);
+        userList.add(user2);
+
+        mUserListAdapter.notifyDataSetChanged();
+
     }
 
     private void initializeRecycleView() {
